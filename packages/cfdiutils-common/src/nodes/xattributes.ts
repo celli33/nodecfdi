@@ -1,6 +1,6 @@
 import { Xml } from '../utils/xml';
 
-export class Attributes {
+export class XAttributes {
   private attributes: Record<string, string> = {};
 
   constructor(attributes?: Record<string, unknown>) {
@@ -53,7 +53,7 @@ export class Attributes {
   public importRecord(attributes?: Record<string, unknown>): this {
     if (attributes)
       Object.entries(attributes).forEach(([key, value]) => {
-        const fixedValue = Attributes.castValueToString(key, value);
+        const fixedValue = XAttributes.castValueToString(key, value);
         this.set(key, fixedValue);
       });
     return this;

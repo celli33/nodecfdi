@@ -1,8 +1,8 @@
-import { Attributes } from '@nodecfdi/cfdiutils-common';
+import { XAttributes } from '@nodecfdi/cfdiutils-common';
 
-describe('Nodes.Attributes', () => {
+describe('Nodes.XAttributes', () => {
   test('construct without arguments', () => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     expect(attributes.count()).toBe(0);
   });
 
@@ -11,7 +11,7 @@ describe('Nodes.Attributes', () => {
       id: 'sample',
       foo: 'bar',
     };
-    const attributes = new Attributes(data);
+    const attributes = new XAttributes(data);
     expect(attributes.count()).toBe(2);
     Object.entries(data).forEach(([key, value]) => {
       expect(attributes.exists(key)).toBeTruthy();
@@ -23,7 +23,7 @@ describe('Nodes.Attributes', () => {
     ['empty', ''],
     ['white space', '    '],
   ])('set method with invalid name %s', (opt, name) => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     expect.assertions(1);
     try {
       attributes.set(name, '');
@@ -33,7 +33,7 @@ describe('Nodes.Attributes', () => {
   });
 
   test('set method', () => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     // first
     attributes.set('foo', 'bar');
     expect(attributes.count()).toBe(1);
@@ -57,17 +57,17 @@ describe('Nodes.Attributes', () => {
     ['hyphen text', '-x'],
     ['inner space', 'foo bar'],
   ])('set with invalid names (%s)', (opt, name) => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     expect(() => attributes.set(name, '')).toThrow('invalid xml name');
   });
 
   test('get method on non existent', () => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     expect(attributes.get('foo')).toBe('');
   });
 
   test('remove', () => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     attributes.set('foo', 'bar');
 
     attributes.remove('bar');
@@ -78,7 +78,7 @@ describe('Nodes.Attributes', () => {
   });
 
   test('array access', () => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     attributes.exportRecord()['id'] = 'sample';
     attributes.exportRecord()['foo'] = 'foo foo foo';
     attributes.exportRecord()['foo'] = 'bar'; // Override
@@ -102,7 +102,7 @@ describe('Nodes.Attributes', () => {
       lorem: 'ipsum',
     };
     const created: Record<string, string> = {};
-    const attributes = new Attributes(data);
+    const attributes = new XAttributes(data);
     attributes.getEntries().forEach(([key, value]) => {
       created[key] = value;
     });
@@ -110,7 +110,7 @@ describe('Nodes.Attributes', () => {
   });
 
   test('set to (undefined|null) perform remove', () => {
-    const attributes = new Attributes({
+    const attributes = new XAttributes({
       foo: 'bar',
       bar: 'foo',
     });
@@ -123,7 +123,7 @@ describe('Nodes.Attributes', () => {
   });
 
   test('import with (undefined|null) perform remove', () => {
-    const attributes = new Attributes({
+    const attributes = new XAttributes({
       set: '1',
       importArray: '1',
       offsetSet: '1',
@@ -151,7 +151,7 @@ describe('Nodes.Attributes', () => {
   test('import with invalid value', () => {
     expect(
       () =>
-        new Attributes({
+        new XAttributes({
           foo: [],
         })
     ).toThrow('Cannot convert value of attribute foo to string');
@@ -170,7 +170,7 @@ describe('Nodes.Attributes', () => {
       return this.value;
     };
 
-    const attributes = new Attributes({
+    const attributes = new XAttributes({
       constructor: toStringObject,
     });
     attributes.exportRecord()['offsetSet'] = `${toStringObject}`;
@@ -185,11 +185,24 @@ describe('Nodes.Attributes', () => {
   });
 
   test('export record', () => {
-    const attributes = new Attributes();
+    const attributes = new XAttributes();
     attributes.set('foo', 'bar');
 
     expect(attributes.exportRecord()).toStrictEqual({
       foo: 'bar',
     });
+  });
+
+  test('remove all', () => {
+    const attributes = new XAttributes({
+      foo: 'bar',
+      bar: 'foo',
+    });
+    expect(attributes.exists('foo')).toBeTruthy();
+    expect(attributes.exists('bar')).toBeTruthy();
+    attributes.removeAll();
+    expect(attributes.exists('foo')).toBeFalsy();
+    expect(attributes.exists('bar')).toBeFalsy();
+    expect(attributes.count()).toBe(0);
   });
 });
