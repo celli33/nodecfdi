@@ -1,4 +1,4 @@
-import { XAttributes } from '@nodecfdi/cfdiutils-common';
+import { XAttributes } from '../../src';
 
 describe('Nodes.XAttributes', () => {
   test('construct without arguments', () => {
