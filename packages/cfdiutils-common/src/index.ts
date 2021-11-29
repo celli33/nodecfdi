@@ -1,1 +1,1 @@
-export * from './lib/cfdiutils-common';
+export * from './nodes/attributes';
