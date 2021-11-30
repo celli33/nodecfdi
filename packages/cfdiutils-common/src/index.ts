@@ -1,1 +1,1 @@
-export * from './nodes/xattributes';
+export * from './nodes/c_attributes';
