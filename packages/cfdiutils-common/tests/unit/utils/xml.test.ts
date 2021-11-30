@@ -1,4 +1,4 @@
-import { Xml } from '../../src/utils/xml';
+import { Xml } from '../../../src/utils/xml';
 
 describe('Utils.Xml', () => {
   test.each([['First_Name'], ['_4-lane'], ['tél'], ['month-day']])('true on valid names', (name) => {
