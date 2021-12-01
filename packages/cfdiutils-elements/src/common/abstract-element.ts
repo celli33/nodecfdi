@@ -21,10 +21,10 @@ export abstract class AbstractElement extends CNode implements ElementInterface 
     return {};
   }
 
-  protected helperGetOrAdd(element: ElementInterface): CNodeInterface {
+  protected helperGetOrAdd<T extends AbstractElement>(element: T): T {
     const retrieved = this.searchNode(element.getElementName());
     if (retrieved) {
-      return retrieved;
+      return retrieved as T;
     }
     this.addChild(element);
     return element;
