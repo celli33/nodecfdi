@@ -1,9 +1,5 @@
 import { UseImpuestos } from './use-impuestos';
-import { Impuestos } from '../../../../src/cfdi33/impuestos';
-import { Traslado } from '../../../../src/cfdi33/traslado';
-import { Retencion } from '../../../../src/cfdi33/retencion';
-import { Retenciones } from '../../../../src/cfdi33/retenciones';
-import { Traslados } from '../../../../src/cfdi33/traslados';
+import { Impuestos, Retencion, Retenciones, Traslado, Traslados } from '../../../../src/cfdi33';
 
 describe('Elements.Cfdi33.Trait.ImpuestosTrait', () => {
   test('get impuestos', () => {
