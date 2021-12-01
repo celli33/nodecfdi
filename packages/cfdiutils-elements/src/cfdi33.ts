@@ -12,3 +12,4 @@ export * from './cfdi33/complemento-concepto';
 export * from './cfdi33/impuestos';
 export * from './cfdi33/informacion-aduanera';
 export * from './cfdi33/cuenta-predial';
+export * from './cfdi33/concepto-impuestos';
