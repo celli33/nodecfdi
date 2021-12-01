@@ -1,4 +1,4 @@
-import { Receptor } from '../../../src/cfdi33/receptor';
+import { Receptor } from '../../../src/cfdi33';
 
 describe('Elements.Cfdi33.Receptor', () => {
   test('get element name', () => {

@@ -1,4 +1,4 @@
-import { Addenda } from '../../../src/cfdi33/addenda';
+import { Addenda } from '../../../src/cfdi33';
 import { CNode } from '@nodecfdi/cfdiutils-common';
 
 describe('Elements.Cfdi33.Addenda', () => {
