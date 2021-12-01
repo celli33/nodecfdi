@@ -9,3 +9,4 @@ export * from './cfdi33/cfdi_relacionado';
 export * from './cfdi33/cfdi_relacionados';
 export * from './cfdi33/complemento';
 export * from './cfdi33/complemento-concepto';
+export * from './cfdi33/impuestos';
