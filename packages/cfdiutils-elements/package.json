@@ -1,0 +1,25 @@
+{
+  "name": "@nodecfdi/cfdiutils-elements",
+  "description": "",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nodecfdi/cfdiutils/tree/main/packages/cfdiutils-elements",
+  "author": "OcelotlStudio <contacto@ocelotlstudio.com>",
+  "license": "MIT",
+  "keywords": [
+    "common",
+    "cfdi",
+    "estructura",
+    "struct",
+    "xml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodecfdi/cfdiutils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodecfdi/cfdiutils/issues"
+  },
+  "dependencies": {
+    "@nodecfdi/cfdiutils-common": "*"
+  }
+}
