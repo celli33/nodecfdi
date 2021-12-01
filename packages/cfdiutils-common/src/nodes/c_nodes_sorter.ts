@@ -24,7 +24,7 @@ export class CNodesSorter {
 
   public parseNames(names: unknown[]): Map<number, string> {
     const isValidName = (name: unknown): boolean => {
-      return !!name && typeof name === 'string';
+      return !!name && typeof name === 'string' && name !== '0';
     };
     return new Map(
       [...new Set(names.filter(isValidName) as string[])].map((entry, i) => {
