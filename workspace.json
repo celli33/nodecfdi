@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "cfdiutils-common": "packages/cfdiutils-common"
+    "cfdiutils-common": "packages/cfdiutils-common",
+    "cfdiutils-elements": "packages/cfdiutils-elements"
   }
 }

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nodecfdi/cfdiutils-common": ["packages/cfdiutils-common/src/index.ts"]
+      "@nodecfdi/cfdiutils-common": ["packages/cfdiutils-common/src/index.ts"],
+      "@nodecfdi/cfdiutils-elements": ["packages/cfdiutils-elements/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
