@@ -1,14 +1,14 @@
 import { ImpuestosLocales, RetencionesLocales, TrasladosLocales } from '../../../src/imp_local10';
 
-describe('Elements.ImpLocal10.RetencionesLocales', () => {
+describe('Elements.ImpLocal10.ImpuestosLocales', () => {
   let element: ImpuestosLocales;
   beforeEach(() => {
     element = new ImpuestosLocales();
   });
 
   test('get element name', () => {
-    expect(element.name()).toBe('implocal:RetencionesLocales');
-    expect(element.getElementName()).toBe('implocal:RetencionesLocales');
+    expect(element.name()).toBe('implocal:ImpuestosLocales');
+    expect(element.getElementName()).toBe('implocal:ImpuestosLocales');
   });
 
   test('retencion', () => {
