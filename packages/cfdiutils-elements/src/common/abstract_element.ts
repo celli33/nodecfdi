@@ -1,5 +1,5 @@
 import { CNode, CNodeInterface } from '@nodecfdi/cfdiutils-common';
-import { ElementInterface } from './element-interface';
+import { ElementInterface } from './element_interface';
 
 export abstract class AbstractElement extends CNode implements ElementInterface {
   protected constructor(name: string, attributes: Record<string, unknown> = {}, children: CNodeInterface[] = []) {

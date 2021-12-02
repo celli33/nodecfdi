@@ -1,7 +1,7 @@
-import { AbstractElement } from '../common/abstract-element';
+import { AbstractElement } from '../common/abstract_element';
 import { CNodeInterface } from '@nodecfdi/cfdiutils-common';
 import { use } from 'typescript-mix';
-import { ImpuestosTrait } from './traits/impuestos-trait';
+import { ImpuestosTrait } from './traits/impuestos_trait';
 import { CfdiRelacionados } from './cfdi_relacionados';
 import { CfdiRelacionado } from './cfdi_relacionado';
 import { Emisor } from './emisor';

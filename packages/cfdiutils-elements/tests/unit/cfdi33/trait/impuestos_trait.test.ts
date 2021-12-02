@@ -1,4 +1,4 @@
-import { UseImpuestos } from './use-impuestos';
+import { UseImpuestos } from './use_impuestos';
 import { Impuestos, Retencion, Retenciones, Traslado, Traslados } from '../../../../src/cfdi33';
 
 describe('Elements.Cfdi33.Trait.ImpuestosTrait', () => {

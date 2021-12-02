@@ -1,4 +1,4 @@
-import { UseInformacionAduanera } from './use-informacion-aduanera';
+import { UseInformacionAduanera } from './use_informacion_aduanera';
 import { InformacionAduanera } from '../../../../src/cfdi33';
 
 describe('Elements.Cfdi33.Trait.InformacionAduaneraTrait', () => {

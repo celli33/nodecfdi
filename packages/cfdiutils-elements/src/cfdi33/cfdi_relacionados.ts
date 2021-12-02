@@ -1,4 +1,4 @@
-import { AbstractElement } from '../common/abstract-element';
+import { AbstractElement } from '../common/abstract_element';
 import { CNodeInterface } from '@nodecfdi/cfdiutils-common';
 import { CfdiRelacionado } from './cfdi_relacionado';
 

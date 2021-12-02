@@ -1,7 +1,7 @@
-import { AbstractElement } from '../common/abstract-element';
+import { AbstractElement } from '../common/abstract_element';
 import { CNodeInterface } from '@nodecfdi/cfdiutils-common';
 import { use } from 'typescript-mix';
-import { InformacionAduaneraTrait } from './traits/informacion-aduanera-trait';
+import { InformacionAduaneraTrait } from './traits/informacion_aduanera-trait';
 
 interface Parte extends AbstractElement, InformacionAduaneraTrait {}
 

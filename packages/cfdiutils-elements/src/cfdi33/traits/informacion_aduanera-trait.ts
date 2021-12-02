@@ -1,5 +1,5 @@
 import { CNodeInterface } from '@nodecfdi/cfdiutils-common';
-import { InformacionAduanera } from '../informacion-aduanera';
+import { InformacionAduanera } from '../informacion_aduanera';
 
 export abstract class InformacionAduaneraTrait {
   abstract addChild(node: CNodeInterface): CNodeInterface;

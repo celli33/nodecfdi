@@ -1,11 +1,11 @@
-import { AbstractElement } from '../common/abstract-element';
+import { AbstractElement } from '../common/abstract_element';
 import { use } from 'typescript-mix';
-import { InformacionAduaneraTrait } from './traits/informacion-aduanera-trait';
-import { ImpuestosTrait } from './traits/impuestos-trait';
+import { InformacionAduaneraTrait } from './traits/informacion_aduanera-trait';
+import { ImpuestosTrait } from './traits/impuestos_trait';
 import { CNodeInterface } from '@nodecfdi/cfdiutils-common';
-import { ConceptoImpuestos } from './concepto-impuestos';
-import { CuentaPredial } from './cuenta-predial';
-import { ComplementoConcepto } from './complemento-concepto';
+import { ConceptoImpuestos } from './concepto_impuestos';
+import { CuentaPredial } from './cuenta_predial';
+import { ComplementoConcepto } from './complemento_concepto';
 import { Parte } from './parte';
 
 interface Concepto extends AbstractElement, InformacionAduaneraTrait, ImpuestosTrait {}
