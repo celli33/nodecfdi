@@ -15,3 +15,4 @@ export * from './cfdi33/cuenta-predial';
 export * from './cfdi33/concepto-impuestos';
 export * from './cfdi33/parte';
 export * from './cfdi33/concepto';
+export * from './cfdi33/conceptos';
