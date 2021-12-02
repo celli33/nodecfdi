@@ -1,6 +1,6 @@
 import { AbstractElement } from '../common/abstract_element';
 import { use } from 'typescript-mix';
-import { InformacionAduaneraTrait } from './traits/informacion_aduanera-trait';
+import { InformacionAduaneraTrait } from './traits/informacion_aduanera_trait';
 import { ImpuestosTrait } from './traits/impuestos_trait';
 import { CNodeInterface } from '@nodecfdi/cfdiutils-common';
 import { ConceptoImpuestos } from './concepto_impuestos';

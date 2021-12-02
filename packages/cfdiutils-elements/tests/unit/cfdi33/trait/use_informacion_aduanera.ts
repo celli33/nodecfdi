@@ -1,6 +1,6 @@
 import { CNode } from '@nodecfdi/cfdiutils-common';
 import { use } from 'typescript-mix';
-import { InformacionAduaneraTrait } from '../../../../src/cfdi33/traits/informacion_aduanera-trait';
+import { InformacionAduaneraTrait } from '../../../../src/cfdi33/traits/informacion_aduanera_trait';
 
 interface UseInformacionAduanera extends CNode, InformacionAduaneraTrait {}
 
