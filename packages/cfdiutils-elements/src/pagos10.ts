@@ -5,3 +5,4 @@ export * from './pagos10/traslado';
 export * from './pagos10/traslados';
 export * from './pagos10/impuestos';
 export * from './pagos10/pago';
+export * from './pagos10/pagos';
