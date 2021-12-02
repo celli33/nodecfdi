@@ -18,5 +18,8 @@
   },
   "bugs": {
     "url": "https://github.com/nodecfdi/cfdiutils/issues"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.7.5"
   }
 }
