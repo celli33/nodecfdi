@@ -1,7 +1,7 @@
 {
   "name": "@nodecfdi/cfdiutils-common",
   "description": "Estructura de datos que permite administrar en memoria una colección de nodos con hijos de tipo nodo donde cada uno tiene una colección de atributos.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/nodecfdi/cfdiutils/tree/main/packages/cfdiutils-common",
   "author": "OcelotlStudio <contacto@ocelotlstudio.com>",
   "license": "MIT",
