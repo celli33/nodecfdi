@@ -20,7 +20,7 @@
     "url": "https://github.com/nodecfdi/cfdiutils/issues"
   },
   "dependencies": {
-    "@nodecfdi/cfdiutils-common": "*",
+    "@nodecfdi/cfdiutils-common": "^0.2.0",
     "typescript-mix": "^3.1.3"
   }
 }
