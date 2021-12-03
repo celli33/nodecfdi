@@ -46,7 +46,7 @@ export class Xml {
     return /^[\p{L}_:][\p{L}\d_:.-]*$/u.test(name);
   }
 
-  public static createElement(document: Document, name: string, content: string = ''): Element {
+  public static createElement(document: Document, name: string, content = ''): Element {
     return Xml.createDOMElement(
       () => {
         if (!name) {

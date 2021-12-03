@@ -1,6 +1,6 @@
 import { CNodeInterface } from './c_node_interface';
 import { CNode } from './c_node';
-import { DomValidators } from '@nodecfdi/cfdiutils-common';
+import { DomValidators } from '../utils/dom_validators';
 
 export class XmlNodeImporter {
   private registeredNamespaces = [];
