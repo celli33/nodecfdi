@@ -1,5 +1,5 @@
 import { Comprobante } from '../comprobante';
-import { SumasConceptos } from '@nodecfdi/cfdiutils-elements';
+import { SumasConceptos } from '../../sumas_conceptos';
 
 export class SumasConceptosWriter {
   private readonly comprobante: Comprobante;
