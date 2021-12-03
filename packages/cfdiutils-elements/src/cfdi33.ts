@@ -17,3 +17,4 @@ export * from './cfdi33/parte';
 export * from './cfdi33/concepto';
 export * from './cfdi33/conceptos';
 export * from './cfdi33/comprobante';
+export * from './cfdi33/helpers/sumas_conceptos_writer';
