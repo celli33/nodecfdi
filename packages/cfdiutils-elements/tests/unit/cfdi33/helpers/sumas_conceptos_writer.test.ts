@@ -1,6 +1,7 @@
 import { Comprobante, SumasConceptosWriter } from '../../../../src/cfdi33';
 import { SumasConceptos } from '../../../../src';
 import { XmlNodeUtils } from '@nodecfdi/cfdiutils-common';
+// import { ImpuestosLocales } from '../../../../src/imp_local10/impuestos_locales';
 
 describe('Cfdi33.SumasConceptosWriter', () => {
   test('constructor', () => {
@@ -198,4 +199,85 @@ describe('Cfdi33.SumasConceptosWriter', () => {
     ].join('');
     expect(XmlNodeUtils.nodeToXmlString(comprobante.getImpuestos())).toBe(expected);
   });
+  // test('expected generate xml', () => {
+  //   const comprobante = new Comprobante({
+  //     CondicionesDePago: 'CONTADO',
+  //     Fecha: '2018-01-12T08:15:01',
+  //     Folio: '11541',
+  //     FormaPago: '04',
+  //     LugarExpedicion: '76802',
+  //     MetodoPago: 'PUE',
+  //     Moneda: 'MXN',
+  //     Serie: 'H',
+  //     TipoDeComprobante: 'I',
+  //   });
+  //   comprobante.addEmisor({
+  //     Nombre: 'ESCUELA KEMPER URGATE SA DE CV',
+  //     RegimenFiscal: '601',
+  //     Rfc: 'EKU9003173C9',
+  //   });
+  //   comprobante.addReceptor({
+  //     Rfc: 'XAXX010101000',
+  //     UsoCFDI: 'P01',
+  //   });
+  //   comprobante
+  //     .addConcepto({
+  //       Cantidad: '2.00',
+  //       ClaveProdServ: '90111501',
+  //       ClaveUnidad: 'E48',
+  //       Descripcion: 'Paquete',
+  //       Importe: '1355.67',
+  //       Unidad: 'UNIDAD DE SERVICIO',
+  //       ValorUnitario: '677.83',
+  //     })
+  //     .addTraslado({
+  //       Base: '1355.67',
+  //       Importe: '216.91',
+  //       Impuesto: '002',
+  //       TasaOCuota: '0.160000',
+  //       TipoFactor: 'Tasa',
+  //     });
+  //   comprobante
+  //     .addConcepto({
+  //       Cantidad: '1.00',
+  //       ClaveProdServ: '90101501',
+  //       ClaveUnidad: 'E48',
+  //       Descripcion: 'Restaurante',
+  //       Importe: '353.45',
+  //       Unidad: 'UNIDAD DE SERVICIO',
+  //       ValorUnitario: '353.45',
+  //     })
+  //     .addTraslado({
+  //       Base: '353.45',
+  //       Importe: '56.55',
+  //       Impuesto: '002',
+  //       TasaOCuota: '0.160000',
+  //       TipoFactor: 'Tasa',
+  //     });
+  //   const impuestosLocales = new ImpuestosLocales();
+  //   impuestosLocales.addTrasladoLocal({
+  //     ImpLocTrasladado: 'IH',
+  //     Importe: '27.43',
+  //     TasadeTraslado: '2.50',
+  //   });
+  //   impuestosLocales.addRetencionLocal({
+  //     ImpLocRetenido: 'IH',
+  //     Importe: '27.43',
+  //     TasadeRetencion: '2.50',
+  //   });
+  //   comprobante.getComplemento().add(impuestosLocales);
+  //
+  //   const precision = 2;
+  //   const sumasConceptos = new SumasConceptos(comprobante, precision);
+  //   const writer = new SumasConceptosWriter(comprobante, sumasConceptos, precision);
+  //   impuestosLocales
+  //     .attributes()
+  //     .set('TotaldeTraslados', writer.format(sumasConceptos.getLocalesImpuestosTrasladados()));
+  //   impuestosLocales
+  //     .attributes()
+  //     .set('TotaldeRetenciones', writer.format(sumasConceptos.getLocalesImpuestosRetenidos()));
+  //   writer.put();
+  //   console.log(XmlNodeUtils.nodeToXmlString(comprobante));
+  //   expect(true).toBeTruthy();
+  // });
 });
