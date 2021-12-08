@@ -1,3 +1,6 @@
 [submodule "packages/cfdiutils-common"]
 	path = packages/cfdiutils-common
 	url = git@github.com:nodecfdi/cfdiutils-common.git
+[submodule "packages/cfdiutils-elements"]
+	path = packages/cfdiutils-elements
+	url = git@github.com:nodecfdi/cfdiutils-common.git
