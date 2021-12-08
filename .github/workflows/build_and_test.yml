@@ -17,7 +17,7 @@ jobs:
         name: Checkout [main]
         with:
           fetch-depth: 0
-          submodule: true
+          submodules: true
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v2
@@ -37,7 +37,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
-          submodule: true
+          submodules: true
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
       - uses: actions/setup-node@v1
